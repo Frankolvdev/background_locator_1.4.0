@@ -151,7 +151,7 @@ class IsolateHolderService : MethodChannel.MethodCallHandler, Service() {
         intent.action = NOTIFICATION_ACTION
 
         val pendingIntent: PendingIntent = PendingIntent.getActivity(this,
-                1, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+                1, intent, PendingIntent.FLAG_IMMUTABLE)
 
         return NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle(notificationTitle)
